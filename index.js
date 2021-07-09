@@ -4,7 +4,9 @@ const cors = require("cors");
 const userRoutes = require("./app/routes/user.routes.js");
 
 const app = express();
-const PORT = 5000;
+
+require('dotenv').config();
+const PORT = process.env.HTTP_PORT;
 
 var corsOptions = {
     origin: "http://localhost:8081"
